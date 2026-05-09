@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useRemix } from '../../hooks/useRemix';
 import { useWeb3 } from '../../hooks/useWeb3';
@@ -11,7 +11,7 @@ import Layout from '../../components/Layout';
 import Toast from '../../components/Toast';
 import { Upload, Music, Image as ImageIcon } from 'lucide-react';
 
-export default function UploadRemix() {
+function UploadRemixContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const beatId = searchParams.get('beatId');
@@ -311,6 +311,14 @@ export default function UploadRemix() {
         </div>
       </div>
     </Layout>
+  );
+}
+
+export default function UploadRemix() {
+  return (
+    <Suspense fallback={<div className="h-screen flex items-center justify-center text-white">Loading...</div>}>
+      <UploadRemixContent />
+    </Suspense>
   );
 }
 
