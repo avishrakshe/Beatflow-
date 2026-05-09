@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Solana wallet adapter default modal/button styles (MVP). We override via Tailwind where needed. */
+@import '@solana/wallet-adapter-react-ui/styles.css';
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-dark-border;
+  }
+  
+  body {
+    @apply bg-dark-bg text-white antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  :root {
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-dark-card/80 backdrop-blur-xl border border-white/10;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold 
+           hover:bg-primary-hover transition-all duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed
+           shadow-lg shadow-primary/20 hover:shadow-primary/30;
+  }
+  
+  .btn-secondary {
+    @apply bg-dark-hover text-white px-6 py-3 rounded-xl font-semibold 
+           hover:bg-dark-border transition-all duration-200;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-gray-400 px-4 py-2 rounded-lg 
+           hover:bg-dark-hover hover:text-white transition-all duration-200;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-dark-card rounded-xl p-6 border border-dark-border 
+           hover:border-dark-hover transition-all duration-200;
+  }
+  
+  .beat-card {
+    @apply bg-dark-card rounded-xl p-4 border border-dark-border 
+           hover:border-accent-green/50 hover:bg-dark-hover 
+           transition-all duration-300 cursor-pointer;
+  }
+  
+  /* Input styles */
+  .input {
+    @apply bg-dark-surface border border-dark-border rounded-lg px-4 py-2 
+           text-white placeholder-gray-500 focus:outline-none 
+           focus:border-accent-green focus:ring-1 focus:ring-accent-green;
+  }
+  
+  /* Scrollbar styles */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-dark-surface;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-dark-hover rounded-full;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-border;
+  }
+
+  .pb-safe {
+    padding-bottom: var(--safe-bottom);
+  }
+}
+

@@ -1,0 +1,21 @@
+{
+  "name": "creator-music-marketplace",
+  "version": "1.0.0",
+  "description": "Creator-to-Creator Music Marketplace MVP for ETHMumbai",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "dev": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "concurrently": "^9.2.1",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^17.4.2"
+  }
+}

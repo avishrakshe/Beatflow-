@@ -1,0 +1,11 @@
+{
+  "name": "BeatFlow Mobile",
+  "short_name": "BeatFlow",
+  "description": "Mobile-first Solana music marketplace with on-chain proof and paid streaming",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "orientation": "portrait"
+}
+
