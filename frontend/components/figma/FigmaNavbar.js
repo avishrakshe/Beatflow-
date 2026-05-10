@@ -13,9 +13,7 @@ export default function FigmaNavbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/70 border-b border-purple-200/30">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow">
-            <Music2 className="w-6 h-6 text-white" />
-          </div>
+          <img src="/images/logo.jpg" alt="BeatFlow Logo" className="w-10 h-10 rounded-2xl object-cover shadow-lg shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-shadow" />
           <span className="text-xl font-bold bg-gradient-to-r from-purple-700 to-purple-900 bg-clip-text text-transparent">
             BeatFlow
           </span>

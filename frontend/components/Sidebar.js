@@ -38,9 +38,7 @@ export default function Sidebar({ className = '', onClose }) {
       {/* Logo */}
       <div className="p-6 border-b border-dark-border">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-gradient-purple-blue flex items-center justify-center">
-            <Music2 className="w-6 h-6 text-white" />
-          </div>
+          <img src="/images/logo.jpg" alt="BeatFlow Logo" className="w-10 h-10 rounded-lg object-cover shadow-lg border border-dark-border" />
           <h1 className="text-2xl font-bold bg-gradient-blue-green bg-clip-text text-transparent">
             BeatFlow
           </h1>
