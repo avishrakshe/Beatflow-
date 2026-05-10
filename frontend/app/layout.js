@@ -1,5 +1,9 @@
+import dynamic from 'next/dynamic';
 import '../styles/globals.css';
-import SolanaProviders from './providers';
+
+const SolanaProviders = dynamic(() => import('./providers'), {
+  ssr: false,
+});
 
 export const metadata = {
   title: 'BeatFlow Mobile - Solana Music App',
